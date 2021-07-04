@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
+</head>
+<style>
+    body{
+        font-family: 'Baloo Paaji 2', cursive;
+        background-image: url("signpagebg1.jpg");
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    div.main{
+        position: relative;
+        top: 2vh;
+        left: 40vw;
+        margin:20px;
+        box-shadow: 20px 20px 40px black;
+        width: 300px;
+        justify-content: center;
+        border-radius: 20px;
+        height: 350px;
+    }
+    div.main .main1{
+        margin: 10px;
+    }
+    div.main .main1 input{
+        font-family: 'Baloo Paaji 2', cursive;
+        font-size: 20px;
+        padding: 5px;
+    }
+    div.main .main1 textarea{
+        font-family: 'Baloo Paaji 2', cursive;
+        font-size: 20px;
+        width: 230px;
+    }
+    div.main .main1 a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        background-color: gray;
+        border-radius: 20px;
+        padding:4px;
+        
+    }
+
+</style>
+<body>
+    
+    <div class="main">
+        <center><form action="login (1).php" method="POST" enctype="multipart/form-data" >
+    
+            <div class="main1">
+                <h2><p style="color:black">LOG IN FORM</p></h2>
+            </div>
+            
+            <div class="main1">
+                <input type="text" name="mail" placeholder="xyz@gmail.com" required>
+            </div>
+            <div class="main1">
+                <input type="password" name="pass" placeholder="password" required>
+            </div>
+            <div class="main1">
+                <center><input type="submit" name="but1" value="login"></center>
+            </div>
+            <div class="main1">
+                <a href="forgotpassword.php" class="back">forgot password ?</a>
+            </div>
+            <div class="main1">
+                <a href="sign in page.html" class="back">back</a>
+            </div>
+</body>
+</html>

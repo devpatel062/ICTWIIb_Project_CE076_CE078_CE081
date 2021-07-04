@@ -1,0 +1,186 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">    
+    <title>Responsive Nav</title>
+</head>
+<style>
+    
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: lightgreen;
+    position: relative;
+    top: 0vh;
+    left: 0vw;
+}
+.brand {
+    width: auto;
+    height: 100%;
+    float: left;
+    margin: 0 0 0 5%;
+}
+
+.menu {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+.menu ul {
+    width: 100%;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;      
+    display: -moz-box;         
+    display: -ms-flexbox;     
+    display: -webkit-flex;     
+    display: flex;             
+}
+.menu ul a {
+    width: 20%;
+    height: inherit;
+    color: #222;
+    display: inline-block;
+}
+.menu ul a:hover {
+    background-color: green;
+    color: #fff;
+}
+#menuToggle {
+    display: none;
+}
+.menu-icon {
+    display: none;
+}
+/*Início das configurações da Navigation com dispositivos < 768px*/
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 100%;
+        height: auto;
+    }
+    .menu ul {
+        display: block;
+        max-height: 0;
+    	overflow: hidden;
+    	-webkit-transition: max-height 0.3s;
+    	-moz-transition: max-height 0.3s;
+        -ms-transition: max-height 0.3s;
+        -o-transition: max-height 0.3s;
+    	transition: max-height 0.3s;
+        
+    }
+    .menu ul a {
+        text-align: left;
+        width: 100%;
+        height: 50px;
+        background-color: #f1c40f;
+        padding: 10px 0px 10px 5%;
+    }
+    .menu-icon {
+        width: 100px;
+        height: inherit;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 60px;
+    }
+    #menuToggle:checked ~ ul {
+        max-height: 350px;
+        
+    }
+    .menu-icon i {
+        font-size: 1.7em;
+    }
+    .homepagecontent{
+        width: 100%;
+        font-size: 15px;
+        margin-left: 1vw;
+    }
+    div.name{
+        position:absolute;
+        top: 350px;
+        left: 8%;
+        font-size: 20px;
+    }
+}
+.pic{
+        position: absolute;
+        top: 8vh;
+        max-width: 100%;
+        height: auto;
+        z-index: -1;
+    }
+    .homepagecontent{
+        position: absolute;
+        top: 95vh;
+        margin-left: 0vw;
+        font-size: 45px;
+        max-width: 500px;
+        width: 100%;
+        border: 3px solid black;
+        padding: 2px;
+    }
+    .info{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .name{
+        position:absolute;
+        top: 450px;
+        left: 30%;
+    }
+</style>
+<body>
+    
+    <header>
+        <figure class="brand">FOODIE'S KITCHEN</figure>
+        <div class="name" style="font-size: 60px ; font-family: 'Dancing Script', cursive;">FOODIE'S KITCHEN</div>
+        <nav class="menu">
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
+            <ul>
+                <a href="#"><li>HOME</li></a>
+                <a href="menu.php"><li>MENU</li></a>
+                <a href="rewards.html"><li>REWARDS</li></a>
+                <a href="cart.php"><li>CART</li></a>
+                <a href="logout.php"><li>LOGOUT</li></a>
+            </ul>
+        </nav>
+    </header>
+    <div class="pic"><img src="homepage.jpg" alt="error" width="100%" height="545px"></div>
+    <div class="info">
+        <div class="homepagecontent">
+            Profit is not the legitimate purpose of business. The legitimate purpose of business is
+             to provide a product or service that people need and do it so well that it’s profitable.
+        </div>
+    </div>
+</body>
+</html>
+<?php
+    session_start();
+    $print=$_SESSION['username'];
+    echo $print;
+?>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+</head>
+<style>
+    .container::before {
+        background: url('bb.jpg') no-repeat center center/cover;
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 600vh;
+        z-index: -1;
+        background-attachment:fixed ;
+    }
+
+    #certi {
+        display: flex;
+        /* establish flex container */
+        flex-direction: column;
+        /* stack flex items vertically */
+        justify-content: center;
+        /* center items vertically, in this case */
+        align-items: center;
+        margin-top: 60vh;
+        margin-left: auto;
+        margin-right: auto;
+        height: 3200px;
+        width: 1200px;
+
+    }
+
+    #certi img {
+
+        height: 800px;
+        width: 90%;
+        margin: 150px;
+        box-shadow: 20px 20px 40px black;
+        margin: 20px;
+    }
+
+    #center {
+        text-align: center;
+        color: burlywood;
+    }
+
+    #back a {
+        font-size: 35px;
+        text-decoration: none;
+        padding: 10px;
+        color: black;
+        border: 3px solid black;
+        border-radius: 30px;
+        position: absolute;
+        top: 580vh;
+    }
+</style>
+
+<body>
+    <div id="back" class="container">
+        <div id="center" style="font-size: 150px ; font-family: 'Dancing Script', cursive;">Rewards</div>
+        <div id="certi">
+            <img src="c1 (1).png" alt="error">
+            <img src="c1 (2).png" alt="error">
+            <img src="c1 (3).png" alt="error">
+            <img src="c1 (4).png" alt="error">
+        </div>
+
+        <p>
+            <center><a href="homepage.html" class="">back</a></center>
+        </p>
+    </div>
+</body>
+
+</html>
