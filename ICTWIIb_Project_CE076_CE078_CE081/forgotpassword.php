@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'config (1).php';
+include_once 'config.php';
 if(isset($_POST['submit']))
 {
     $email1 = $_POST['email'];
@@ -8,19 +8,16 @@ if(isset($_POST['submit']))
     $row = mysqli_fetch_assoc($result); 
 	$email2=$row['email'];
 	$email_id=$row['email'];
+  $password = $row['password'];
+  $name = $row['name'];
 	$id = $row['id'];
 	
   if($email1==$email2) {
     $to = $email_id;
-    $txt = "Hi, $email1. Click http://localhost/DP/Project/reset_password.php?id=$id to reset the password";
-    $headers = "From: pateldj0077@gmail.com\r\n";
+    $txt = "Hi, $name. your password is $password";
+    $headers = "From: foodiekitchen876@gmail.com@gmail.com\r\n";
     $subject = "Reset Password";
      $msg=mail($to,$subject,$txt,$headers);
-    if($msg){
-      $_SESSION['msg'] = 'password link sent';
-    }
-    else{
-    echo "mail was not sent!!";			}
   } 
 				else{
 					echo 'invalid userid';
